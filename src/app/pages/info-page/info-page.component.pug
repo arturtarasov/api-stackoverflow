@@ -1,0 +1,7 @@
+table(border="1" cellpadding="10")
+    tr
+        td Автор
+        td Ответ
+    tr(*ngFor="let item of info")
+        td="{{ item.owner.display_name }}"
+        td="{{ item.body }}"

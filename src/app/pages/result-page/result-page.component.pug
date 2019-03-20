@@ -1,0 +1,11 @@
+table(border="1" cellpadding="10")
+    tr
+        td Автор
+        td Тема
+        td Количество ответов
+        td теги
+    tr(*ngFor="let item of result" '(click)'="openAnswer(item.question_id)").can-click
+        td="{{ item.owner.display_name }}"
+        td="{{ item.title }}"
+        td="{{ item.answer_count }}"
+        td="{{ item.tags }}"

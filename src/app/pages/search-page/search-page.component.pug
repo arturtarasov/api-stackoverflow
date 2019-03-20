@@ -1,0 +1,6 @@
+form([formGroup]="form" '(ngSubmit)'="onSearch()").formGroup
+  label(for="search") Поиск:
+  .search.form-element
+    input(type="text" name="search" formControlName="search" placeholder='Введите значение')
+  .btn.form-element
+    button(type="submit")="Искать"
