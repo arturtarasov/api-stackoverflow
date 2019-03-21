@@ -15,17 +15,17 @@ export class ResultPageComponent implements OnInit {
 
   ngOnInit() {
     this.route.queryParams.subscribe((params: Params) => {
-      this.search = params['searchElement'];
-    });
-    this.questionsService.getByIntitle(this.search).subscribe((data) => {
-      this.result = data.items;
-      console.log(this.result);
+      this.search = params.searchElement;
+      this.questionsService.getByIntitle(this.search).subscribe((data) => {
+        this.result = data.items;
+        console.log(this.result);
+      });
     });
   }
   openAnswer(id: number) {
     this.router.navigate(['/info'], {
       queryParams: {
-        id: id
+        id
       }
     });
   }
